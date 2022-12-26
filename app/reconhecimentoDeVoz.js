@@ -12,6 +12,7 @@ recognition.addEventListener('result', onSpeak);
 function onSpeak(e) {
     const chute = e.results[0][0].transcript;
     exibeChuteNaTela(chute);
+    verificaSeOChuteTemValorValido(chute);
 };
 
 function exibeChuteNaTela(chute) {
@@ -19,6 +20,8 @@ function exibeChuteNaTela(chute) {
     <div>Você disse:</div>
     <span class="box">${chute}</span>
     `
-
-    verificaSeOChuteTemValorValido(chute);
 };
+
+recognition.addEventListener('end', () => {
+    recognition.start();
+});
