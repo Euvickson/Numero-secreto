@@ -5,10 +5,12 @@ function verificaSeOChuteTemValorValido (chute) {
         elementoChute.innerHTML += "valor Inválido";
     } else {
         if (numeroForMaiorOuMenorQueOValorPermitido(numero)) {
-            elementoChute.innerHTML += `<div>Valor Inválido. O número secreto precisa estar entre ${menorValor} e ${maiorValor}</div>`;
+            elementoChute.innerHTML += `<div>Valor Inválido: Fale um número entre ${menorValor} e ${maiorValor}</div>`;
         } else {
             if(numero === numeroSecreto) {
                 document.body.innerHTML = `
+                <h2>Você acertou!</h2>
+                <h3>O número secreto era ${numeroSecreto}</h3>
                 `
             }
         }
