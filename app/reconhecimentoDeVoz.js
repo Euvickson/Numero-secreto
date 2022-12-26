@@ -19,4 +19,6 @@ function exibeChuteNaTela(chute) {
     <div>Você disse:</div>
     <span class="box">${chute}</span>
     `
+
+    verificaSeOChuteTemValorValido(chute);
 };
